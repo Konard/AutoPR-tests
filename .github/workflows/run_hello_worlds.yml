@@ -28,8 +28,12 @@ jobs:
         g++ hello_world.cpp -o hello_world
         ./hello_world > output.txt
     - name: Test C++ Hello World output
-      run: grep "Hello, World!" output.txt
+      run: |
+        cat output.txt
+        grep "Hello, World!" output.txt
     - name: Compile and run Rust Hello World program
       run: cargo run --quiet > rust_output.txt
     - name: Test Rust Hello World output
-      run: grep "Hello, World!" rust_output.txt
+      run: |
+        cat rust_output.txt
+        grep "Hello, World!" rust_output.txt
