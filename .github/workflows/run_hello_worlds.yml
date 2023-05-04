@@ -1,0 +1,33 @@
+name: Run Hello World Programs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_hello_worlds:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Setup C++ environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install C++ compiler
+      run: sudo apt-get install -y g++
+    - name: Setup Rust environment
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        - name: Compile and run C++ Hello World program
+        run: |
+        g++ hello_world.cpp -o hello_world
+        ./hello_world
+        - name: Compile and run Rust Hello World program
+        run: |
+        cargo build --bin hello_world
+        cargo run --bin hello_world
