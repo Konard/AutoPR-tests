@@ -36,6 +36,6 @@ jobs:
       run: |
         cd src
         cargo build --bin hello_world
-        cargo run --bin hello_world --quiet >../rust_output.txt
+        cargo run --bin hello_world --quiet > rust_output.txt
     - name: Test Rust Hello World output
       run: grep "Hello, World!" rust_output.txt
