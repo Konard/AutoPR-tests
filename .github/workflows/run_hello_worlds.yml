@@ -30,10 +30,6 @@ jobs:
     - name: Test C++ Hello World output
       run: grep "Hello, World!" output.txt
     - name: Compile and run Rust Hello World program
-      run: |
-        cd src
-        rustc hello_world.rs -o rust_hello_world
-        ./rust_hello_world > ../rust_output.txt
-        cd ..
+      run: cargo run --quiet > rust_output.txt
     - name: Test Rust Hello World output
       run: grep "Hello, World!" rust_output.txt
