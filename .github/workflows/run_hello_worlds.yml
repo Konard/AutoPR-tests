@@ -31,8 +31,9 @@ jobs:
       run: grep "Hello, World!" output.txt
     - name: Compile and run Rust Hello World program
       run: |
-        cd src
-        cargo build --bin hello_world
-        cargo run --bin hello_world --quiet > ../rust_output.txt
+        cd rust_hello_world
+        rustc main.rs -o rust_hello_world
+        ./rust_hello_world > ../rust_output.txt
+        cd ..
     - name: Test Rust Hello World output
       run: grep "Hello, World!" rust_output.txt
