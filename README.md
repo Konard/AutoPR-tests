@@ -3,7 +3,7 @@
 # 🚀 AutoPR Template 🚀
 
 [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.gg/ykk7Znt3K6)
-
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/your-username/your-repo)
 [AutoPR](https://github.com/irgolic/AutoPR) automatically writes pull requests in response to issues with ChatGPT.  
 
 </div>
