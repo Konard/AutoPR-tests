@@ -12,3 +12,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - name: Setup C++ environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install C++ compiler
+      run: sudo apt-get install -y g++
+    - name: Setup Rust environment
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
