@@ -26,9 +26,22 @@ jobs:
     - name: Compile and run C++ Hello World program
       run: |
         g++ hello_world.cpp -o hello_world
-        ./hello_world
+        - name: Compile and run C++ Hello World program
+        run: |
+        g++ hello_world.cpp -o hello_world
+        ./hello_world > output.txt
+        - name: Test C++ Hello World output
+        run: grep "Hello, World!" output.txt
+        - name: Test C++ Hello World output
+        run: grep "Hello, World!" output.txt
+        - name: Compile and run Rust Hello World program
+        run: |
+        cd src
     - name: Compile and run Rust Hello World program
       run: |
         cd src
+        cd src
         cargo build --bin hello_world
-        cargo run --bin hello_world
+        cargo run --bin hello_world > rust_output.txt
+        - name: Test Rust Hello World output
+          run: grep "Hello, World!" rust_output.txt
