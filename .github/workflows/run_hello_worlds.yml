@@ -32,11 +32,6 @@ jobs:
         ./hello_world > output.txt
     - name: Test C++ Hello World output
       run: grep "Hello, World!" output.txt
-    - name: Test C++ Hello World output
-      run: grep "Hello, World!" output.txt
-    - name: Compile and run Rust Hello World program
-      run: |
-        cd src
     - name: Compile and run Rust Hello World program
       run: |
         cd src
@@ -44,4 +39,3 @@ jobs:
         cargo run --bin hello_world > rust_output.txt
     - name: Test Rust Hello World output
       run: grep "Hello, World!" rust_output.txt
-          run: grep "Hello, World!" rust_output.txt
