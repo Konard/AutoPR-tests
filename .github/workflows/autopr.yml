@@ -26,7 +26,8 @@ jobs:
         fi
     - name: Checkout
       uses: actions/checkout@v2
-      with:
+      with: 
+        token: ${{ secrets.GH_ACCESS_TOKEN }}
         ref: main
         fetch-depth: 1
     - name: AutoPR
