@@ -23,11 +23,11 @@ jobs:
       with:
         profile: minimal
         toolchain: stable
-        - name: Compile and run C++ Hello World program
+      - name: Compile and run C++ Hello World program
         run: |
-        g++ hello_world.cpp -o hello_world
-        ./hello_world
-        - name: Compile and run Rust Hello World program
+          g++ hello_world.cpp -o hello_world
+          ./hello_world
+      - name: Compile and run Rust Hello World program
         run: |
-        cargo build --bin hello_world
-        cargo run --bin hello_world
+          cargo build --bin hello_world
+          cargo run --bin hello_world
