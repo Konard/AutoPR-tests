@@ -4,6 +4,10 @@
 
 [AutoPR](https://github.com/irgolic/AutoPR) automatically writes pull requests in response to issues with ChatGPT.
 
+![image](https://user-images.githubusercontent.com/1431904/236355726-882c1c49-77dd-4398-9b98-96b86b105f41.png)
+
+The cost of making code, automation and docs for this repository.
+
 ### Hello, World! in C++
 - Purpose: This simple C++ program demonstrates how to print "Hello, World!" to the console.
 - Source file: `hello_world.cpp`
